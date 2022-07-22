@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import p2.Estudiante;
 import p3.Correo;
 import p3.DominioGmail;
+import p3.DominioGobierno;
+import p3.DominioOutlook;
+import p3.DominioUTPL;
+import p3.DominioYahoo;
 
 /**
  *
@@ -33,8 +37,16 @@ public class Principal {
         e.establecerUserName("rrelizalde");
         ArrayList<Correo> lista = new ArrayList<>();
         
-        DominioGmail dominio = new DominioGmail();
-        dominio.establecerDominio("gmail.com");
+        DominioGmail dominioG = new DominioGmail();
+        dominioG.establecerDominio("gmail.com");
+        DominioOutlook dominioO = new DominioOutlook();
+        dominioO.establecerDominio("hotmail.com");
+        DominioYahoo dominioY = new DominioYahoo();
+        dominioY.establecerDominio("yahoo.com");
+        DominioUTPL dominioU = new DominioUTPL();
+        dominioU.establecerDominio("utpl.edu.ec");
+        DominioGobierno dominioGo = new DominioGobierno();
+        dominioGo.establecerDominio("gob.ec");
         Correo c = new Correo();
         c.establecerDominio(dominio);
         c.establecerUserName(e.obtenerUserName());
